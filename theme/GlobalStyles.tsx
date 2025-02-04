@@ -20,7 +20,7 @@ export const GlobalStyles =  StyleSheet.create({
         left: 0,
         position: 'absolute',
       },
-    /*Contenedor explore*/
+    /*Contenedor header explore*/
     headerImage: {
         color: '#808080',
         bottom: -90,
@@ -91,15 +91,22 @@ export const GlobalStyles =  StyleSheet.create({
     {
         backgroundColor: Colors.grey,
         color: Colors.white,
-        borderColor: Colors.white,
+        borderColor: Colors.veryDarkGrey,
         width:'auto',
-        borderWidth: 4,
-        height: 59 ,
+        borderWidth: 1,
+        height: 40,
         textAlign:'center',
     },
-    /*explore*/
-    textoExplore:{
+    /*desconectar*/
+    textoDesconectar:{
         fontSize:30,
         alignSelf:'center',
+        marginBottom:50,
+    },
+    contenedorDesconectar:{
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignContent:'center'
     }
 })

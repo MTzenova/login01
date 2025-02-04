@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform, View, TextInput, Text, Pressable } from 'react-native';
+import { Image, StyleSheet, Platform, View, TextInput, Text, Pressable, Alert } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -39,10 +39,13 @@ export default function HomeScreen() {
         </View>
 
         <View style={GlobalStyles.contenedorRegistroAcceder}>
+
           <Pressable onPress={()=>{router.push('../signUp')}}>
-            <Text style={GlobalStyles.registrar}>Regístrate aquí</Text>
+            <Text style={GlobalStyles.registrar} onPress={() => Alert.alert("Registrado correctamente.")}>Regístrate aquí</Text>
           </Pressable>
-          <Boton label='Acceder' backgroundColor='azul' link='./explore'></Boton>
+
+          <Boton label='Acceder' backgroundColor='azul' link='./desconectar'></Boton>
+          
         </View>
         
       </View>

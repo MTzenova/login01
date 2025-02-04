@@ -7,6 +7,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { GlobalStyles } from '@/theme/GlobalStyles';
+import Boton from '@/components/Boton';
 
 export default function TabTwoScreen() {
   return (
@@ -21,8 +22,9 @@ export default function TabTwoScreen() {
         />
       }>
       
-      <View>
-        <Text style={GlobalStyles.textoExplore}>Desconectar</Text>
+      <View style={GlobalStyles.contenedorDesconectar}>
+        <Text style={GlobalStyles.textoDesconectar}>Desconectar</Text>
+        <Boton label='Cerrar sesión' backgroundColor='gris' link='../(tabs)'></Boton>
       </View>
       
     </ParallaxScrollView>
