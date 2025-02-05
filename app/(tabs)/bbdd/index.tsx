@@ -11,19 +11,18 @@ import Boton from '@/components/Boton';
 export default function TabThreeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#1D3D47', dark: '#1D3D47' }}
       headerImage={
         <IconSymbol
           size={310}
           color="#808080"
           name="chevron.left.forwardslash.chevron.right"
-          style={GlobalStyles.headerImage}
+          style={GlobalStyles.headerImageBBDD}
         />
       }>
       
       <View style={GlobalStyles.contenedorDesconectar}>
-        <Text style={GlobalStyles.textoDesconectar}>Desconectar</Text>
-        <Boton label='Cerrar sesión' backgroundColor='gris' link='../(tabs)'></Boton>
+        <Text style={GlobalStyles.textoBaseDatos}>Datos de la base de datos</Text>
       </View>
       
     </ParallaxScrollView>

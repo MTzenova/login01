@@ -8,6 +8,7 @@ export const GlobalStyles =  StyleSheet.create({
         alignItems:  'center',
         flex: 1,
         justifyContent: 'center', 
+        width:'100%',
     },
     box:{
         width: '100%',
@@ -27,6 +28,12 @@ export const GlobalStyles =  StyleSheet.create({
         left: -35,
         position: 'absolute',
       },
+    headerImageBBDD: {
+        color: '#A1CEDC',
+        bottom: -90,
+        left: -35,
+        position: 'absolute',
+      },
     /*Texto iniciar sesion*/
     textoIniciarsesion:{
         fontSize:25,
@@ -42,11 +49,11 @@ export const GlobalStyles =  StyleSheet.create({
     /*Iniciar sesion*/
     input: {
         borderRadius: 30,
-        padding: 13,
+        padding: 15,
         fontSize: 16,
         marginBottom: 15,
         width:'100%',
-        height: 40,
+        height: 50,
         backgroundColor: Colors.lightBlueInput,
         borderWidth:1,
         borderColor: Colors.blueText
@@ -70,7 +77,7 @@ export const GlobalStyles =  StyleSheet.create({
     },
     boton:{
         width: 'auto',
-        height: 40,
+        height: 50,
         textAlign: 'center',
         padding: 10,
         fontSize: 16,
@@ -94,7 +101,7 @@ export const GlobalStyles =  StyleSheet.create({
         borderColor: Colors.veryDarkGrey,
         width:'auto',
         borderWidth: 1,
-        height: 40,
+        height: 50,
         textAlign:'center',
     },
     /*desconectar*/
@@ -108,5 +115,10 @@ export const GlobalStyles =  StyleSheet.create({
         flexDirection:'column',
         justifyContent:'center',
         alignContent:'center'
+    },
+    /*bbdd*/
+    textoBaseDatos:{
+        fontSize:30,
+        alignSelf:'center',
     }
 })

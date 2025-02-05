@@ -12,7 +12,7 @@ import Boton from '@/components/Boton';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#D0D0D0' }}
       headerImage={
         <IconSymbol
           size={310}
@@ -24,7 +24,7 @@ export default function TabTwoScreen() {
       
       <View style={GlobalStyles.contenedorDesconectar}>
         <Text style={GlobalStyles.textoDesconectar}>Desconectar</Text>
-        <Boton label='Cerrar sesión' backgroundColor='gris' link='../(tabs)'></Boton>
+        <Boton label='Sign out' backgroundColor='gris' link='../../../'></Boton>
       </View>
       
     </ParallaxScrollView>

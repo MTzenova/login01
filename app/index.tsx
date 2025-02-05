@@ -10,7 +10,7 @@ import Boton from '@/components/Boton';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#A1CEDC' }}
       headerImage={
         <Image
           source={require('@/assets/images/partial-react-logo.png')}
@@ -40,11 +40,11 @@ export default function HomeScreen() {
 
         <View style={GlobalStyles.contenedorRegistroAcceder}>
 
-          <Pressable onPress={()=>{router.push('../signUp')}}>
+          <Pressable onPress={()=>{router.push('./(tabs)/bbdd')}}>
             <Text style={GlobalStyles.registrar} onPress={() => Alert.alert("Registrado correctamente.")}>Regístrate aquí</Text>
           </Pressable>
 
-          <Boton label='Acceder' backgroundColor='azul' link='./desconectar'></Boton>
+          <Boton label='Acceder' backgroundColor='azul' link='./(tabs)/bbdd'></Boton>
           
         </View>
         

@@ -27,24 +27,18 @@ export default function TabLayout() {
           default: {},
         }),
       }}>
+      
       <Tabs.Screen
-        name="index"
+        name="bbdd/index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <Ionicons size={28} name="home" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="baseDatos"
-        options={{
-          title: 'Base de Datos',
+          title: 'BBDD',
           tabBarIcon: ({ color }) => <Ionicons size={28} name="server" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="desconectar"
+        name="desconectar/index"
         options={{
-          title: 'Desconectar',
+          title: 'Sign out',
           tabBarIcon: ({ color }) => <Ionicons size={28} name="log-out" color={color} />,
         }}
       />

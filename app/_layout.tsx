@@ -32,8 +32,9 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="index" options={{headerShown:false}}></Stack.Screen>
       </Stack>
-      <StatusBar style="auto" />
+      <StatusBar style="auto"/>
     </ThemeProvider>
   );
 }
