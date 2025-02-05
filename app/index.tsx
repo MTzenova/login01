@@ -1,13 +1,34 @@
-import { Image, StyleSheet, Platform, View, TextInput, Text, Pressable, Alert } from 'react-native';
-import { HelloWave } from '@/components/HelloWave';
+import { Image, View, TextInput, Text, Pressable, Alert } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 import { GlobalStyles } from '@/theme/GlobalStyles';
 import { router } from 'expo-router';
 import Boton from '@/components/Boton';
+import { useState } from 'react';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@firebase/auth';
+import { auth } from '@/Firebaseconfig';
 //pantalla de login
 export default function HomeScreen() {
+  const[email,setEmail] = useState('');
+  const[password,setPassword] = useState('');
+
+  const logIn = async () =>{
+    try{
+      const user = await(signInWithEmailAndPassword(auth,email,password));
+      if(user) router.replace('../(tabs)')
+    }catch(error:any){
+      console.log(error);
+      Alert.alert("Inicio de sesión incorrecto",error.message);
+    }
+  }
+  const register = async () => {
+    try{
+      const user = await(createUserWithEmailAndPassword(auth,email,password))
+    }catch(error:any){
+      console.log(error);
+      Alert.alert("Error al registrar el usuario",error.message);
+    }
+  }
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#A1CEDC' }}
@@ -28,23 +49,23 @@ export default function HomeScreen() {
 
           <TextInput
           style={GlobalStyles.input}
-          placeholder="Email"/>
+          placeholder="Email" value={email} onChangeText={setEmail}/>
 
           <Text style={GlobalStyles.textoCorreoContra}>Introduce tu contraseña:</Text>
 
           <TextInput
           style={GlobalStyles.input}
-          placeholder="Contraseña" secureTextEntry={true}/>
+          placeholder="Contraseña" secureTextEntry={true} value={password} onChangeText={setPassword}/>
 
         </View>
 
         <View style={GlobalStyles.contenedorRegistroAcceder}>
 
           <Pressable onPress={()=>{router.push('./(tabs)/bbdd')}}>
-            <Text style={GlobalStyles.registrar} onPress={() => Alert.alert("Registrado correctamente.")}>Regístrate aquí</Text>
+            <Text style={GlobalStyles.registrar} onPress={register}>Regístrate aquí</Text>
           </Pressable>
 
-          <Boton label='Acceder' backgroundColor='azul' link='./(tabs)/bbdd'></Boton>
+          <Boton label='Acceder' backgroundColor='azul' link='./(tabs)/bbdd' onPress={logIn}></Boton>
           
         </View>
         
