@@ -36,13 +36,13 @@ export const GlobalStyles =  StyleSheet.create({
       },
     /*Texto iniciar sesion*/
     textoIniciarsesion:{
-        fontSize:25,
+        fontSize:28,
         fontWeight:'bold',
         color:Colors.blueText,
         marginBottom:20,
     },
     textoCorreoContra:{
-        fontSize:16,
+        fontSize:18,
         marginBottom:5,
         color:Colors.black,
     },
@@ -73,14 +73,14 @@ export const GlobalStyles =  StyleSheet.create({
     registrar:{
         textDecorationLine:'underline',
         color:Colors.blueText,
-        fontSize: 16,
+        fontSize: 18,
     },
     boton:{
         width: 'auto',
         height: 50,
         textAlign: 'center',
         padding: 10,
-        fontSize: 16,
+        fontSize: 18,
         borderRadius: 30,
         backgroundColor: Colors.blueLight,
         fontFamily:'Poppins',
