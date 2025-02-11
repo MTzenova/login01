@@ -67,8 +67,7 @@ export default function TabThreeScreen() {
           return (
             <View>
               <Text>{item.tarea}</Text>
-              <Pressable style={[GlobalStyles.botonGris, GlobalStyles.boton]}
-              onPress={() => borrarTarea(item.id)}>
+              <Pressable onPress={() => borrarTarea(item.id)}>
                 <Text>Eliminar</Text>
               </Pressable>
             </View>
