@@ -8,8 +8,15 @@ import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { GlobalStyles } from '@/theme/GlobalStyles';
 import Boton from '@/components/Boton';
+import { getAuth } from '@firebase/auth';
+import { router } from 'expo-router';
 
 export default function TabTwoScreen() {
+
+  getAuth().onAuthStateChanged((user) =>{
+      if (!user) router.replace('/');
+  });
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#D0D0D0' }}
