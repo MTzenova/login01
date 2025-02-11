@@ -14,7 +14,7 @@ export default function HomeScreen() {
   const logIn = async () =>{
     try{
       const user = await(signInWithEmailAndPassword(auth,email,password));
-      if(user) router.replace('../(tabs)')
+      if(user) router.replace('./(tabs)')
     }catch(error:any){
       console.log(error);
       Alert.alert("Inicio de sesión incorrecto",error.message);
@@ -23,7 +23,7 @@ export default function HomeScreen() {
   const register = async () => {
     try{
       const user = await(createUserWithEmailAndPassword(auth,email,password))
-      if(user) router.replace('../(tabs)')
+      if(user) router.replace('./(tabs)')
     }catch(error:any){
       console.log(error);
       Alert.alert("Error al registrar el usuario",error.message);
