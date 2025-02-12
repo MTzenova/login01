@@ -66,7 +66,7 @@ export default function HomeScreen() {
             <Text style={GlobalStyles.registrar} onPress={register}>Regístrate aquí</Text>
           </Pressable>
 
-          <Pressable onPress={logIn}>
+          <Pressable style={[GlobalStyles.boton, GlobalStyles.botonAzul]} onPress={logIn}>
             <Text>Login</Text>
           </Pressable>
           
