@@ -114,7 +114,7 @@ export const GlobalStyles =  StyleSheet.create({
         display:'flex',
         flexDirection:'column',
         justifyContent:'center',
-        alignContent:'center'
+        alignContent:'center',
     },
     /*bbdd*/
     textoBaseDatos:{

@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform, View, Text } from 'react-native';
+import { StyleSheet, Image, Platform, View, Text, Pressable } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -10,6 +10,7 @@ import { GlobalStyles } from '@/theme/GlobalStyles';
 import Boton from '@/components/Boton';
 import { getAuth } from '@firebase/auth';
 import { router } from 'expo-router';
+import { auth } from '@/Firebaseconfig';
 
 export default function TabTwoScreen() {
 
@@ -29,11 +30,12 @@ export default function TabTwoScreen() {
         />
       }>
       
-      <View style={GlobalStyles.contenedorDesconectar}>
-        <Text style={GlobalStyles.textoDesconectar}>Desconectar</Text>
-        <Boton label='Sign out' backgroundColor='gris' link='../../../'></Boton>
-      </View>
       
+      <Pressable style={GlobalStyles.contenedorDesconectar} onPress={() => auth.signOut()}>
+        <Text style={GlobalStyles.textoDesconectar}>Desconectar</Text>
+            <Text style={[GlobalStyles.botonGris, GlobalStyles.boton]}>Cerrar sesión</Text>
+        </Pressable>
+
     </ParallaxScrollView>
   );
 }
